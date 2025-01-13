@@ -20,6 +20,9 @@ function Home() {
         const fetchProducts = async () => {
             try {
                 const response = await fetch(`${process.env.REACT_APP_BACKEND_URI}/products`); 
+
+                console.log('Backend URI:', process.env.REACT_APP_BACKEND_URI);
+
                 if (!response.ok) {
                     throw new Error('Failed to fetch products');
                 }
